@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.onload = function () {
+            const imageContainer = document.querySelectorAll(".container-foto-anuncios");
+
+            imageContainer.forEach(imageContainer => {
+                const image = imageContainer.querySelector("img")
+
+
+                imageContainer.addEventListener("mouseenter", function () {
+                    image.style.transform = "scale(1.2)";
+
+                });
+
+                imageContainer.addEventListener("mouseleave", function () {
+                    image.style.transform = "scale(1)";
+
+                });
+            });
+        };
+
+
+    </script>
+</head>
+
+<body>
+    <div class="estrutura">
+        <header class="header">
+            <a class="logo" href=""><img src="imagens/logo-menor.png" alt=""></a>
+            <nav>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="" id="servicos">Serviço</a></li>
+                    <li><a href="">Contato</a></li>
+                    <li><a href="">Sobre</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="sidenav-project">
+            <div class="sidenav-project-photos">
+                <div class="sidenav-project-photos-item">
+                    <div class="sidenav-project-photoarea">
+                        <div class="sidenav-project-photoinfor">
+                            <h3>Habitação</h3>
+                            <p>Comprar, construir ou reformar sua casa nova pode ser mais simples do que você imagina!
+                            </p>
+                        </div>
+                        <img src="imagens/habitacao.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="sidenav-project-photos">
+                <div class="sidenav-project-photos-item">
+                    <div class="sidenav-project-photoarea">
+                        <div class="sidenav-project-photoinfor">
+                            <h3>Consórcios</h3>
+                            <p>Comprar, construir ou reformar sua casa nova pode ser mais simples do que você imagina!
+                            </p>
+                        </div>
+                        <img src="imagens/consorcios.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="sidenav-project-photos">
+                <div class="sidenav-project-photos-item">
+                    <div class="sidenav-project-photoarea">
+                        <div class="sidenav-project-photoinfor">
+                            <h3> Poupança CAIXA </h3>
+                            <p>A poupança da CAIXA é a opção de investimento mais segura, acessível e adequada a todos
+                                os perfis.</p>
+                        </div>
+                        <img src="imagens/caixa-poupaca.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="sidenav-project-photos">
+                <div class="sidenav-project-photos-item">
+                    <div class="sidenav-project-photoarea">
+                        <div class="sidenav-project-photoinfor">
+                            <h3>Cartões CAIXA</h3>
+                            <p>Para o que precisar, temos o cartão certo para você.</p>
+                        </div>
+                        <img src="imagens/cartao.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <main class="content">
+            <div class="titulo">
+                <h1>Realiza</h1>
+                <span>Negócios Bancários</span>
+            </div>
+
+            <div class="caracteristicas">
+                <div>
+                    <span class="casa-img"><img src="icones/habitaçao-header.svg" alt="habitação"></span>
+                    <span class="rotulo">Habitação</span>
+                </div>
+                <div>
+                    <span class="empres-img"><img src="icones/emprestimo-2.svg" alt="emprestimo"></span>
+                    <span class="rotulo">Consignado</span>
+                </div>
+            </div>
+            <p class="col-wide">Criamos este site para facilitar a sua vida, veja o serviço ou produto de seu interesse,
+                solicite uma simulação, entre em contato para esclarecer alguma dúvida!</p>
+
+
+
+            <div class="consorcio">
+                <img class="imagem-1" src="imagens/Consórcios - 1.png" alt="">
+                <p>O consórcio é uma modalidade de compra coletiva, onde um grupo de pessoas se compromete a pagar uma
+                    parcela mensal, por um tempo determinado. Esse dinheiro é guardado em um fundo comum e, todo mês,
+                    alguns integrantes do grupo são escolhidos (por sorteio e por lance) para receber o valor do crédito
+                    e comprar o bem.
+                    Conquiste sua casa, carro, ônibus, caminhão ou máquina agrícola com o consórcio da CAIXA!</p>
+            </div>
+
+
+
+            <div class="div-produtos">
+                <h2>Com quais produtos nós trabalhamos:</h2>
+                <ul>
+                    <li>Financiamento Habitacional;</li>
+                    <li>Empréstimos Consignado; </li>
+                    <li>Consórcios;</li>
+                    <li>Abertura de contas;</li>
+                    <li>Cartão de crédito;</li>
+                    <li>Seguros e capitalização;</li>
+                </ul>
+            </div>
+
+            <div class="div-consignado">
+                <h2>Empréstimo Consignado</h2>
+                <ul class="atributos">
+                    <li>Sem burocracias</li>
+                    <li>Desconto direto em folha</li>
+                    <li>Pagamento em até 120x:<strong>consulte o convênio</strong></li>
+                    <li>Agilidade</li>
+                    <li>Segurança e controle</li>
+                    <li>Comodidade</li>
+                </ul>
+            </div>
+
+            <div class="informacoes">
+                <p>Crédito sem a necessidade de avalista, vantagens especiais e as melhores condições, para funcionários
+                    de empresas e órgãos conveniados, aposentados e pensionista do INSS.</p>
+                <p>Disponível para você usar quando e como quiser. Aproveite para realizar seus planos: reforma da casa,
+                    viagem dos sonhos, organizar sua vida financeira.</p>
+                <div class="simulacao-consignado-botao">Simulação</div>
+            </div>
+
+
+            <div class="col-wide call-div">
+                <div class="call-center">
+                    <div class="call-center-informa">
+                        <h3>Vamos conversar?</h3>
+                        <a href="#">
+                            <div class="call-center-informa-p">Mensagem via whatsapp ou ligue​</div>
+                            <div class="whatsapp">Saiba mais</div>
+                        </a>
+                    </div>
+                    <div class="call-center-img"><img src="imagens/call-center.jpg" alt="" srcset=""></div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="anuncios">
+            <div class="anuncio-area">
+                <h2>Seguros-<span>Caixa</span></h2>
+                <p>Mais tranquilidade para você e sua família.<br>Conheça os nossos Seguros de Acidentes Pessoais,
+                    Bem-Estar e Amparo.</p>
+            </div>
+            <div class="container-foto-anuncios">
+                <img src="imagens/seguros.jpg" alt="casa-caixa">
+            </div>
+            <a href="#"><button type="button">Saiba mais</button></a>
+            <div class="anuncio-area">
+                <h2 id="conta-corrente"> Conta Corrente</h2>
+                <p>Praticidade, comodidade e uma das melhores tarifas do mercado.<br>Com a Conta Corrente CAIXA, você
+                    recebe depósitos, efetua saques e pagamentos, realiza aplicações, obtém empréstimos e financia sua
+                    casa própria com mais facilidade.</p>
+            </div>
+            <div class="container-foto-anuncios">
+                <img src="imagens/abertura-conta.png" alt="cartoes">
+            </div>
+            <a href="#"><button type="button">Saiba mais</button></a>
+
+        </aside>
+
+    </div>
+    <footer class="footer">
+        <div class="footer-services">
+            <h3>Servicos</h3>
+            <ul>
+                <a href="#">
+                    <li>Financiamento Habitacional</li>
+                </a>
+                <a href="#">
+                    <li>Emprestimo-consignado</li>
+                </a>
+                <a href="#">
+                    <li>Consórcios</li>
+                </a>
+                <a href="#">
+                    <li>Abertura de Conta</li>
+                </a>
+                <a href="#">
+                    <li>Cartáo de Créditos</li>
+                </a>
+                <a href="#">
+                    <li>Seguros</li>
+                </a>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Atendimento</h3>
+            <p>De Seg. à Sex. das 08:00 às 18:00</p>
+            <p>📍Av Rep Argentina 3830, sala 105. (Ed Veneza, Foz do Iguaçu)</p>
+            <a class="adress" href="https://goo.gl/maps/24fjccWQYMReGFZw9" target="_blank">Como chegar?</a>
+        </div>
+        <div class="logocaixa">
+            <h3 class="caixa-logo">Somos credenciados pela:</h3>
+            <div class="foto-caixa">
+
+            </div>
+        </div>
+    </footer>
+    <div class="bar-line">
+
+    </div>
+    <div class="footer-info">
+        <p class="copyright-p">Copyright © 2022-2023 REALIZA-NEGÓCIOS-BANCÁRIOS.Todos os direitos reservados.</p>
+        <p class="footer-final">REALIZA-NEGÓCIOS-BANCÁRIOS - Correspondência Bancária, não é uma instituição financeira
+            e não realiza operações de crédito diretamente. Atuamos como correspondente bancário para facilitar o
+            processo de contratação de produtos da Caixa Econômica Federal. Como correspondente bancário, seguimos as
+            diretrizes do Banco Central do Brasil, nos termos da Resolução nº. 3.954, de 24 de fevereiro de 2011.</p>
+    </div>
+
+
+
+
+</body>
+
+</html>

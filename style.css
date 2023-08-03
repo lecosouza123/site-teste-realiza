@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+body, p, h1, ul, li, blockquote{
+    padding: 0px;
+    margin:0px;
+    font-family: 'Nunito', sans-serif;
+}
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    border-radius: 10px; 
+}
+
+.logo{
+    max-width: 200px;
+    cursor: pointer;
+}
+.logo img{
+    width: 160px;
+}
+    
+
+/*GRID GERAL */
+.estrutura {
+    display: grid;
+    grid-template-columns: minmax(180px, 280px) 2fr 300px;
+    grid-template-areas:
+        "header header header "
+        "sidenav content anuncios "
+        "footer footer footer"
+    ;
+}
+/*HEADER*/
+.header {
+    grid-area: header;
+    background-image: linear-gradient(to top left, #2980b9, #6dd5fa);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    display: flex;
+    justify-content: space-between;
+    
+   
+}
+
+.header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+    
+}
+.header nav a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.4s;
+    
+    
+   
+    
+}
+.header nav li a:hover{
+    background-color: rgba(0,0,0,.5);
+    border: 1px solid rgba(255, 255, 255, 0.585);
+    margin: -2px;
+   
+}
+.header li + li {
+    margin-left: 30px;
+}
+.logo img {
+    width: 160px;
+    height: auto;
+}
+
+
+/*SIDENAV*/
+.sidenav-project {
+    grid-area: sidenav;
+    display: flex;
+    flex-direction: column;
+    background-color: #6dd4fa8e;
+    
+}
+.sidenav-project-photos{
+    width: 100vw;
+    max-width: 1000px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Adicionando a propriedade para esconder o conteúdo que ultrapassar */
+
+}
+.sidenav-project-photos-item{
+    width:280px;
+    
+     
+    
+}
+.sidenav-project-photoarea{
+    margin:10px;
+    width: 260px;
+    height: 160px;
+    position: relative;
+    
+    transition: transform 0.3s;/* Adicionando transição para o efeito de zoom */
+    overflow: hidden;
+}
+.sidenav-project-photoarea img{
+    width: 100%;
+    height: inherit;
+    border-radius: 8px;
+    
+  
+}
+.sidenav-project-photoinfor{
+    background-color: rgba(0, 0, 0, 0.409);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    display: none;
+   
+    
+    
+}
+
+.sidenav-project-photoarea:hover{
+    transform: scale(1.1);
+   
+    
+}
+
+.sidenav-project-photoarea:hover
+.sidenav-project-photoinfor {
+    display: flex;
+    cursor: pointer;
+    border-radius: 8px;
+ 
+
+}
+
+.sidenav-project-photoinfor h3{
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+.sidenav-project-photoinfor p{
+    text-align: center;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+
+/*CONTENT*/
+.content {
+    grid-area: content;
+    max-width: 900px;
+    margin: 0 auto;  
+    padding: 30px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.col-wide {
+    grid-column:  1 / -1;
+   
+}
+
+.imagem-1{
+    grid-row: span 2;
+    align-self: end;
+    box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.201);
+    margin-bottom: 10px;
+}
+.imagem-2 {
+    align-self: end;
+}
+
+main p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    letter-spacing: -0.005em;
+    color:rgba(0,0,0,.7)
+}
+.titulo h1 {
+    color: #3E4095;
+    font-size: 4em;
+    line-height: 1;
+    font-weight: 700;
+}
+.titulo span {
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 500;
+}
+.informacoes{
+    align-self: center;
+    
+}
+.div-consignado h2{
+    color: #0066B3;
+    text-align: center;
+    font-size: 1.86em;
+    font-weight: 800;
+    font-style: italic;
+}
+.div-consignado h2:hover{
+    color: #6dd5fa;
+    text-shadow: 1px 1px 2px  black;
+}
+.div-consignado li:hover {
+    border-radius: 20px;
+    background-color: #3e3f9534;
+    color: #6dd5fa;
+}
+.simulacao-consignado-botao{
+    justify-content: center;
+    align-items: center;
+    
+    display: flex;
+    width: 250px;
+    height: 40px;
+    border-radius: 50px 10px;
+    color: #E07B4F;
+    border: 2px solid #E07B4F;
+    font-weight: 800;
+    margin: 0 auto;
+    
+}
+.simulacao-consignado-botao:hover {
+    box-shadow: 0 6px 8px rgba(0,0,0,0.1);
+    background-color: #e6eff3bd ;
+    cursor: pointer;
+}
+.informacoes p + p {
+    margin-top: 50px;
+    margin-bottom: 20px;
+   
+}
+.consorcio{
+    grid-column: span 2;
+}
+.div-produtos{
+    padding: 30px;
+    border-radius: 45px 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44,44,44,0.15);
+    background-image: linear-gradient(135deg, #2980b9, #E88059
+    );
+    align-self: start; 
+    grid-column: span 2;
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+.div-produtos li {
+    color: rgb(245, 240, 240);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.105em;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+.div-produtos li:hover {
+    color: #3E4095;
+}
+.div-produtos li svg:hover {
+    color: #3E4095;
+}
+.div-produtos li svg {
+    color: #83daf9d8;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+
+
+.div-produtos li + li {
+    border-top: 2px solid #83daf9d8;
+}
+.div-produtos h2 {
+    color: #F39200;
+    text-align: center;
+    font-size: 1.86em;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.caracteristicas{
+    display: flex;
+    align-items: flex-start;
+}
+.caracteristicas span {
+    display: block;
+   
+}
+.caracteristicas > div {
+    max-width: 100px;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+.caracteristicas > div:first-child{
+    margin-right: 30px;
+}
+.caracteristicas > img{
+    max-width: 100%;
+    height: auto;
+}
+.rotulo {
+    background-color: white;
+    background-color: #2980b9;
+    color: #e8f2f6;
+    text-align: center;
+    border-radius: 0px 0px 5px 5px;
+}
+.messangem, .atributos{
+    padding: 30px;
+    border-radius: 45px 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44,44,44,0.15);
+    background-image: linear-gradient(135deg, #2980b9, #E88059
+    );
+    align-self: start;   
+} 
+.atributos li {
+    color: rgb(245, 240, 240);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.105em;
+    padding: 15px;
+}
+.atributos li + li {
+    border-top: 2px solid #83daf9d8;
+}
+.messangem > p {
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    color: rgb(245, 240, 240);
+}
+
+.call-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.call-center > img{
+    flex:1;
+    max-width: 100%;
+    
+}
+
+.call-center-informa{
+    flex:1;
+    text-align: center; 
+    position: absolute;  
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+}
+.call-center-informa p{
+    color: #AEE7FC;
+
+    font-weight: bolder;
+   
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.call-center-informa-p{
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #AEE7FC;
+    font-weight: bolder;
+}
+
+.call-center-informa:nth-child(1){
+    right: 20px;
+}
+.whatsapp{
+    background-color: #b3d1e053;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 250px;
+    height: 40px;
+    border-radius: 50px 10px;
+    position: relative;
+    color: white;
+    border: 2px solid white;
+    font-weight: 800;
+    
+}
+
+.whatsapp:hover{
+    box-shadow: 0 6px 8px rgba(0,0,0,0.1);
+    background-color: #b3d1e0bd ;
+}
+
+h3{
+    color: #1065eee9;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+      
+}
+
+
+
+
+ /*ANUNCIOS*/
+.anuncios {
+    grid-area: anuncios;
+    background-color: #6dd4fa8e;
+    display: grid;
+    align-content: start;
+    padding: 30px;
+    grid-gap:30px;
+    display: flex;
+    flex-direction: column;
+   
+
+}
+.container-foto-anuncios{ 
+    overflow: hidden;/* Esconder qualquer conteúdo extra da div */
+    margin: 0 auto;
+    
+    
+}
+.container-foto-anuncios img {
+    transition: transform 0.3 ease;
+    border-radius: 5px;
+}
+/*.container-foto-anuncios img{
+    transform: translateY(-50px);
+}*/
+.anuncio-area{
+    text-align: justify;
+    padding: 10px;
+    margin: 0px;
+    line-height: 1.5em;
+}
+.anuncio-area h2{
+    text-align: center;
+    font-size: 1.8em;
+    color: #3E4095;
+}
+.anuncio-area h2 span{
+    color: #E07B4F;
+}
+
+
+button[type="button"]{
+    color: white;
+    font-weight: bolder;
+   
+    font-size: 1.1em;
+    margin: 0 auto;
+    border: 2px solid white;
+    display: flex;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: #AEE7FC;
+}
+
+
+button[type="button"]:hover{
+    box-shadow: 0 6px 8px rgba(52, 52, 52, 0.1);
+    background-color: #bbdcedac;
+    border: 2px solid #E07B4F;
+    cursor: pointer;
+   
+}
+#conta-corrente {
+    font-size: 1.6em;
+}
+.anuncio-area p {
+    line-height: 1.5em;
+    color: #4C4C5D;
+}
+
+/*Footer*/
+.footer{
+    display: grid;
+    grid-area: footer;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:20px;
+    padding: 30px;
+    background-color: #0066B3;
+    
+}
+
+.footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color:#E07B4F;
+    font-weight: lighter;
+   
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+.footer li {
+    margin-bottom: 5px;
+}
+.footer p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.footer .footer-services {
+   grid-column: 1 / 2;
+   margin: 0 auto;
+  
+}
+
+.footer .footer-services ul a li {
+    font-weight: lighter;
+    color: #fff;
+    padding: 5px;
+}
+.footer-services ul a li:hover{
+    color: #B3D1E0;
+}
+
+.footer .footer-contact {
+    grid-column: 2 / 3;
+    color: white;
+    font-weight: 500;
+    font-size: 1.25em;  
+}
+.footer .footer-contact p {
+    padding-bottom: 10px;
+}
+
+.footer-info {
+    grid-column: 1 / -1;
+    text-align: center;
+    
+}
+.adress {
+    border: 1px solid #E07B4F;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    display: inline-block;
+    position: relative;
+}
+
+
+.adress:hover{
+    background-color: #F09700;
+    transform: translateY(-5px);
+}
+.adress::before{
+    content: "";
+    position: absolute;
+    top: 25%;
+    width: 20px; /* Define a largura dos ícones */
+    height: 20px; /* Define a altura dos ícones */
+    background-image: url(imagens/map-marker-outline.svg);
+    background-size: cover;
+    left: 2px;
+}
+.footer-info p {
+    padding: 10px;
+    line-height: 1.6em;
+    background-color: #0066B3; 
+    
+    
+}
+h3.caixa-logo{
+    color: #B3D1E0;
+    font-size: 1em;   
+}
+.logocaixa {
+    margin: 0 auto;
+}
+.foto-caixa{
+    background-image: url(imagens/caixa.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+}
+.footer-img {
+    grid-column: 3 / 4;
+    max-width: 100%;
+    padding: 20px;   
+}
+.bar-line{
+    height: 1px;
+    max-width: 100%;
+    background-color:  #ff6e45;
+}
+.bar-line-sidebar{
+    height: 2px;
+    max-width: 100%;
+    background-color:  #ff6e45;
+    margin-top: 20px;
+}
+.copyright-p{
+    color: white;
+    font-weight: 600;
+}
+.footer-final{
+    color: #B3D1E0;
+    text-align: center;
+    font-size: 13px;
+}
+
+/*Media query CSS*/
+@media (max-width: 1200px){
+   .estrutura {
+    grid-template-areas:
+    "header header header"
+    "sidenav content content"
+    "sidenav anuncios anuncios"
+    "footer footer footer"
+    ;
+   }
+}
+
+@media (max-width: 760px){
+    .estrutura {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            "header"
+            "sidenav"
+            "content"
+            "anuncios"
+            "footer"
+        ;
+    }
+    .header {
+        grid-template-columns:auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .logo {
+        max-width: 100px;
+        margin-bottom: 20px;
+    }
+    .header nav a {
+        font-size: 13px;
+    }
+    .header li + li {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 760px){
+    .sidenav-project{
+        display: flex;
+        flex-direction: row;
+       
+        
+    }
+    .sidenav-project-photoarea{
+        flex:1;
+        max-width: 150px;
+        padding: 5px;
+        margin: 8px;
+        
+    }
+    
+    .sidenav-project-photoinfor h3,
+    .sidenav-project-photoinfor p{
+        font-size: 10px;
+       
+    }
+    .sidenav-project-photoarea:hover{
+        transform: scale(1);
+        
+    }
+    .sidenav-project-photoinfor:hover{
+        max-height: 160px;
+    }
+
+    
+   
+}
