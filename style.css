@@ -684,13 +684,12 @@ h3.caixa-logo{
        
         
     }
-    .sidenav-project-photoarea{
-        flex:1;
+    .sidenav-project-photoarea{ 
         max-width: 150px;
-        padding: 5px;
-        margin: 8px;
+        
         
     }
+   
     
     .sidenav-project-photoinfor h3,
     .sidenav-project-photoinfor p{
@@ -705,6 +704,31 @@ h3.caixa-logo{
         max-height: 160px;
     }
 
+}
+@media (max-width: 660px){
+    .sidenav-project{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 30px;
+        
+    }
+
+    .sidenav-project-photos-item {
+        width: 80%;
+        margin: 10px auto;
+    }
+    .sidenav-project-photoarea{
+        max-width: 100%;
+        max-height:100%;
+        padding: 0; /* Remove any padding */
+        margin: 0 auto; /* Remove any margin */
+       
+        
+    }
+    .sidenav-project-photoarea:hover .sidenav-project-photoinfor {
+        display: flex;
+    }
     
-   
 }
