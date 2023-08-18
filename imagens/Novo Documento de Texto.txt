@@ -3,3 +3,42 @@
         </a>
 
 <p>Copyright © 2022-2023 REALIZA-NEGÓCIOS-BANCÁRIOS.Todos os direitos reservados.</p>
+ .content{
+        grid-template-columns: auto;
+       
+    }
+    .call-center{
+        flex-direction: column;
+    }
+    .call-center-img {
+        text-align: center;
+    }
+    .call-center-img img{
+        max-width: 100%;
+    }
+    
+    .anuncios{
+        background-color: white;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    .anuncio-area{
+        margin-bottom: 20px;
+    }
+    .container-foto-anuncios{
+        margin: 0 auto;
+    }
+    .container-foto-anuncios {
+        margin: 0 auto; /* Centraliza horizontalmente */
+    }
+    .anuncio-area h2 {
+        font-size: 1.5em; /* Reduz o tamanho do título */
+    }
+    .anuncio-area p {
+        font-size: 1em; /* Reduz o tamanho do texto */
+    }
+    button[type="button"] {
+        width: auto; /* Ajusta a largura do botão automaticamente */
+    }
+}  
