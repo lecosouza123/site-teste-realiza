@@ -1,0 +1,199 @@
+.estrutura {
+        max-width: 100%;
+       
+        grid-template-columns: 100%;
+        grid-template-areas: 
+            "header"
+            "sidenav"
+            "content"
+            "anuncios"
+            "footer"
+        ;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .logo{
+        max-width: 150px;
+        margin-bottom: 20px;
+    }
+    .header nav {
+        margin-top: 20px;
+    }
+    .header li + li {
+        margin-left: 0px;
+        
+    }
+
+    .content, .titulo{
+        max-width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+    .titulo h1 {
+        font-size: 1.8em;
+
+    }
+
+    h2{
+        font-size: 1.3em;
+    }
+    p{
+        font-size: 14px;
+    }
+    
+   
+    .imagem-1 {
+        max-width: 90%;
+        width: 90%;
+        margin: 10px auto;
+    }
+    .caracteristicas > div {
+        max-width: 40px;
+    }
+    
+    .rotulo {
+        font-size: 0.7em;
+    }
+    .caracteristicas{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        
+    }
+    .container-foto-anuncios img {
+        max-width: 100%; /* Define a largura máxima */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+
+    .div-produtos, .div-consignado, .messangem {
+        padding: 10px;
+        max-width: 90%;
+        border-radius: 5px;
+        margin: 0 auto 20px;
+    }
+    .atributos li {
+        font-size: 0.9em;
+    }
+    .div-produtos ul li, .div-consignado ul li {
+        padding: 5px;
+        font-size: 0.9em;
+    }
+    .call-center-informa-p {
+        font-size: 10px;
+        white-space: normal;
+    }
+   
+    .div-consignado h2 {
+        font-size: 1.4em;
+    }
+   
+    .sidenav-project-photoinfor h3,
+    .sidenav-project-photoinfor p {
+        font-size: 6px;
+    }
+
+
+    .sidenav-project{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 30px;
+        
+    }
+
+    .sidenav-project-photos-item {
+        width: 80%;
+        margin: 10px auto;
+    }
+    .sidenav-project-photoarea{
+        max-width: 100%;
+        max-height:100%;
+        padding: 0; /* Remove any padding */
+        margin: 0 auto; /* Remove any margin */
+       
+        
+    }
+    .sidenav-project-photoarea:hover .sidenav-project-photoinfor {
+        display: flex;
+    }
+  
+    .div-produtos li{
+        padding: 5px;
+        font-size: 0.9em;
+    } 
+    .div-produtos > h2 {
+        font-size: 1.1em;
+    }
+    .col-wide-p{
+        margin: 0 auto;
+        font-size: 0.9em;
+        text-align: center;
+        padding: 5px;
+    }
+    .consorcio{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .consorcio > p {
+        font-size: 0.9em;
+        text-align: center;
+        white-space: normal;
+    }
+    .informacoes{
+        max-width: 80%;
+        padding: 5px;
+        margin: 20 auto;
+    }
+    .informacoes > p {
+        font-size: 0.8em;
+    }
+    .atributos ul li {
+        font-size: 0.9em;
+    }
+    .simulacao-consignado-botao{
+        max-width: 120px;
+        border-radius: 5px;
+        max-height: 30px;
+        margin-right:15px;
+    }
+    .div-consignado h2{
+        font-size: 1em;
+    }
+    .call-center{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .call-center-img img{
+        max-width: 95%;
+        width: 90%;
+        height: auto;
+        margin-top: 10px;
+        margin: 0 auto;
+        display: flex;
+       
+    }
+    .call-center-informa{
+        max-width: 180px;
+    }
+    .call-center-informa h3 {
+        font-size: 1em;
+    }
+    .call-center-informa-p{
+        font-size: 13px;
+    }
+    .whatsapp{
+       max-width: 150px;
+       border-radius: 5px;
+       margin-bottom: 20px;
+    }
+    .footer{
+        grid-template-columns: 1fr;
+    }
+}

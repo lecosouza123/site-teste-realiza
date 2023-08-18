@@ -5,6 +5,7 @@ body, p, h1, ul, li, blockquote{
     padding: 0px;
     margin:0px;
     font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
 }
 li {
     list-style: none;
@@ -14,7 +15,7 @@ a{
 }
 
 img{
-    max-width: 100%;
+    width: 100%;
     display: block;
     border-radius: 10px; 
 }
@@ -22,6 +23,8 @@ img{
 .logo{
     max-width: 200px;
     cursor: pointer;
+    grid-column: 1 / span 2;
+    text-align: center;
 }
 .logo img{
     width: 160px;
@@ -44,10 +47,10 @@ img{
     background-image: linear-gradient(to top left, #2980b9, #6dd5fa);
     padding: 30px;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 2fr;
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
    
 }
 
@@ -181,6 +184,9 @@ img{
     grid-column:  1 / -1;
    
 }
+.col-wide-p {
+    grid-column: 1 / -1;
+}
 
 .imagem-1{
     grid-row: span 2;
@@ -198,11 +204,19 @@ main p {
     letter-spacing: -0.005em;
     color:rgba(0,0,0,.7)
 }
+.titulo{
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+}
+
+
 .titulo h1 {
     color: #3E4095;
     font-size: 4em;
     line-height: 1;
     font-weight: 700;
+    
 }
 .titulo span {
     font-size: 1em;
@@ -306,7 +320,11 @@ main p {
 
 .caracteristicas{
     display: flex;
-    align-items: flex-start;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;
 }
 .caracteristicas span {
     display: block;
@@ -362,12 +380,13 @@ main p {
     align-items: center;
     justify-content: center;
     position: relative;
-}
-.call-center > img{
-    flex:1;
-    max-width: 100%;
+    overflow: hidden;
     
 }
+.expand-two{
+    grid-column: span 2;
+}
+
 
 .call-center-informa{
     flex:1;
@@ -427,7 +446,6 @@ h3{
 
 
 
-
  /*ANUNCIOS*/
 .anuncios {
     grid-area: anuncios;
@@ -435,8 +453,7 @@ h3{
     display: grid;
     align-content: start;
     padding: 30px;
-    grid-gap:30px;
-    display: flex;
+    gap:30px;
     flex-direction: column;
    
 
@@ -675,22 +692,27 @@ h3.caixa-logo{
     .header li + li {
         margin-left: 10px;
     }
-}
-
-@media (max-width: 760px){
     .sidenav-project{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        padding: 0 30px;  
        
         
     }
-    .sidenav-project-photoarea{ 
-        max-width: 150px;
-        
+    .sidenav-project-photos{
+        justify-content: center;
+        align-items: center;
+    }
+    .sidenav-project-photoarea  > img{
+        max-width: 100%;
+        width: 100%;
+    }
+  
+    .sidenav-project-photos-item{
+        margin:30px 30px 30px 0;
         
     }
    
-    
     .sidenav-project-photoinfor h3,
     .sidenav-project-photoinfor p{
         font-size: 10px;
@@ -704,31 +726,156 @@ h3.caixa-logo{
         max-height: 160px;
     }
 
+
 }
+
 @media (max-width: 660px){
+    .content{
+        grid-template-columns: auto;
+       
+    }
+    .call-center{
+        flex-direction: column;
+    }
+    .call-center-img {
+        text-align: center;
+    }
+    .call-center-img img{
+        max-width: 100%;
+    }
+    
+    .anuncios{
+        background-color: white;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    .anuncio-area{
+        margin-bottom: 20px;
+    }
+    .container-foto-anuncios{
+        margin: 0 auto;
+    }
+    .container-foto-anuncios {
+        margin: 0 auto; /* Centraliza horizontalmente */
+    }
+    .anuncio-area h2 {
+        font-size: 1.5em; /* Reduz o tamanho do título */
+    }
+    .anuncio-area p {
+        font-size: 1em; /* Reduz o tamanho do texto */
+    }
+    button[type="button"] {
+        width: auto; /* Ajusta a largura do botão automaticamente */
+    }
+}  
+@media (max-width: 375px){
+    .estrutura {
+        grid-template-columns: 100%;
+
+        grid-template-areas:
+            "header"
+            "content"
+            "sidenav"
+            "anuncios"
+            "footer";
+    }
+    .header {
+       flex-direction: column;
+       align-items: center;
+    }
+   
+    .header nav {
+        text-align: center;
+        margin-top: 10px 0px;
+       
+    }
+    .header nav ul {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       
+    }
+    .header nav li {
+        margin: 5px 0;
+        
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+    .imagem-1{
+        display: block;
+        max-width: 100%;
+        
+    }
+    .titulo{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .caracteristicas{
+        display: none;
+    }
+    .whatsapp{
+        max-width: 200px;
+        margin: 0 auto;
+    }
     .sidenav-project{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding-bottom: 30px;
-        
     }
-
-    .sidenav-project-photos-item {
-        width: 80%;
-        margin: 10px auto;
+    .sidenav-project-photos-item{
+        margin: 15px;
     }
-    .sidenav-project-photoarea{
-        max-width: 100%;
-        max-height:100%;
-        padding: 0; /* Remove any padding */
-        margin: 0 auto; /* Remove any margin */
-       
-        
+    .sidenav-project-photoarea {
+        width: 100%;
+        max-width: 260px;
+        margin: 10px;
     }
-    .sidenav-project-photoarea:hover .sidenav-project-photoinfor {
-        display: flex;
+    button[type="button"]:hover{
+        background-color: #0066B3;
     }
     
+   
+    .content {
+        font-size: 0.9em;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-self:center;
+    }
+    .content img{
+        width: 100%;
+    }
+    .consorcio{
+        font-size: 0.9em;
+        text-align: left;
+        text-align: center;
+        
+    }
+    .div-produtos{
+        max-width: 240px;
+        margin: auto 0;
+    }
+    .div-consignado{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .informacoes {
+        grid-column: span 2;
+    }
+    .logocaixa{
+        grid-column: 1 / -1;
+    }
+    
+    .foto-caixa {
+        background-position: center bottom;
+        background-size: contain;
+        max-width: 100%;
+    }
+   
 }
