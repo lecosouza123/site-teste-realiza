@@ -58,26 +58,25 @@ img{
     display: flex;
     flex-wrap: wrap;
     font-size: 16px;
-    
+    border-radius: 4px;
 }
 .header nav a {
     display: block;
-    padding: 10px;
+    padding: 0.8rem 2rem;
     color: #fff;
-    border-radius: 5px;
-    transition: background-color 0.4s;
     overflow: hidden;
-    
+    border: 2px solid transparent;
     
    
     
 }
 .header nav li a:hover{
     background-color: rgba(0,0,0,.5);
-    border: 1px solid rgba(255, 255, 255, 0.585);
-    margin: -2px;
-    overflow: hidden;
    
+    overflow: hidden;
+    border-radius: 4px;
+    border-color: white;
+    transition: background-color 0.4s;
 }
 .header li + li {
     margin-left: 30px;
@@ -460,7 +459,7 @@ h3{
     align-content: start;
     padding: 30px;
     gap:30px;
-    flex-direction: column;
+    
    
 
 }
@@ -849,7 +848,3 @@ h3.caixa-logo{
 
 }
    
-@media (max-width: 375px){
-    
-   
-}
